@@ -1,0 +1,26 @@
+.container {
+    padding: 20px;
+    background-color: rgb(173, 177, 166);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 400px;
+    height: 590px;
+}
+
+.container img {
+    max-width: 100px;
+
+}
+.pre-ver-mas p {
+    width: 410px;
+    font-size: 15px;
+}
+
+.aditional-info {
+    display: none;
+}
+
+.aditional-info-show{
+    display: block;
+}
