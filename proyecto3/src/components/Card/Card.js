@@ -1,10 +1,10 @@
 import React, {Component} from "react";
-import "./Card.css"
+import "../Card/card.css"
 
 class Card extends Component{
 constructor(props){
     super(props)
-    this.state={
+    this.state={ 
         link: " ",
         text: "Ver más",
         viewMore: false,
@@ -12,7 +12,7 @@ constructor(props){
 
 }
 
-    viewMore() {
+    /* viewMore() {
         if (this.state.viewMore) {
             this.setState({
                 viewMore: false,
@@ -24,38 +24,31 @@ constructor(props){
                 text: "Ver menos",
             });
         }
-    }
+    }*/ //VER CON TOTO
 
 render(){
     return(
-        <section className="todo">
-        <div className="container">
-            
-            
-                <h3>{this.props.dataPelis.title}</h3>
-                <img src={this.state.link + this.props.dataPelis.poster_path} alt={this.props.dataPelis.title} />
-                <p>Descripcion: {this.props.dataPelis.overview}</p>
-          
-               
-                <section
-                    className={`${this.state.viewMore ? "aditional-info-show" : "aditional-info"
-                        }`}
-                >
-                    
-                    <p>Rating: {this.props.dataPelis.vote_average}</p>
-                    <p>Estreno: {this.props.dataPelis.release_date}</p>
-                    <p>Popularidad: {this.props.dataPelis.popularity}</p>
-                
-                </section>
-                <button className="more" onClick={() => this.viewMore()}>
-                    {this.state.text}
-                </button>
-                <button onClick={() => this.props.borrarPeliculas(this.props.dataPelis.id)}>Borrar</button>
-               
-                
-        </div>
+        <article>
+            <section className="naviagation">
+                <div>
+                    <i className="fas fa-chevron-left"></i>
+                    <i className="fas fa-chevron-right"></i>
+                </div>
+                    <i className="far fa-window-close"></i>
+            </section>
+        <main>
+        <img src="./img/image-default.png" alt="Imagen de la pelicula"/>
+        <h3>Título/ Nombre</h3>
+        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
+        <section class="aditional-info">
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
         </section>
-    )
+        <a href="">Ver más</a>
+    </main>   
+    </article>
+)    
 }
 
 }
