@@ -1,6 +1,8 @@
-import logo from './logo.svg';
+import React from 'react';
+import Header from "./components/Header/Header";
+import Card from "./components/Card/Card";
+import Footer from './components/Footer/Footer';
 import './App.css';
-import "../src/components/Card/Card";
 
 
 function App() {
@@ -10,7 +12,7 @@ function App() {
         <main>
           <Card/>
         </main>
-          <Footer/>
+      <Footer/>
     </div>
   );
 }
