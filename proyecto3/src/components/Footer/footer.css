@@ -1,0 +1,19 @@
+footer {
+    background-color: black;
+    padding: 30px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+li {
+    color: white;
+    list-style-type: none;
+    margin: 10px;
+}
+
+img {
+    height: 30px;
+    width: 30px;
+    margin: 10px;
+}

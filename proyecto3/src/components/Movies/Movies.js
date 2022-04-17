@@ -23,8 +23,9 @@ componentDidMount() {
         next: data.page + 1,
         resultadoPelis: data.results,
     }
+   
     ))
-
+    
     .catch((error) => console.log(error));
 }
 
@@ -33,7 +34,7 @@ render() {
     return(
         <React.Fragment>
         <Header/>
-        <h1>Cards con su respectivo fetch e info</h1>
+        <h1>Aca va cards con su fetch e info</h1>
         </React.Fragment>
     )
 }
