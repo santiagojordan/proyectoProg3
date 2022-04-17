@@ -33,7 +33,7 @@ render() {
     console.log(this.state.pelis);
     return(
         <React.Fragment>
-        <Header/>
+        
         <h1>Aca va cards con su fetch e info</h1>
         </React.Fragment>
     )

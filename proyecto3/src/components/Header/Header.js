@@ -4,9 +4,9 @@ import "./header.css";
 function Header (){
     return (
 
-        <div className="title">
-            <img src=""></img>
-     </div>
+        <div className="header">
+            <img src="/images/nova.png" className="logo"></img>
+        </div>
 
      );
 }

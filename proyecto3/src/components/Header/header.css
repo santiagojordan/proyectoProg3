@@ -1,3 +1,11 @@
-.title {
-    background-color: turquoise;
+.header {
+    background-color: black;
+    display: flex;
+    justify-content: space-around;
+}
+
+.logo {
+    height: 150px;
+    width: 200px;
+    
 }
