@@ -24,7 +24,7 @@ constructor(props){
                 text: "Ver menos",
             });
         }
-    }*/ //VER CON TOTO
+    }*/ //VER CON TOTO (?)
 
 render(){
     return(
