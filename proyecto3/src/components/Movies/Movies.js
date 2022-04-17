@@ -1,7 +1,7 @@
 import React, {Component} from "react";
-import Card from "../Card/Card";
+//import Card from "../Card/Card";
 import Header from "../Header/Header";
-import Movies from "../Movies/movies.css";
+import "../Movies/movies.css";
 
 class Movies extends Component {
     constructor(props) {
@@ -26,7 +26,16 @@ componentDidMount() {
     ))
 
     .catch((error) => console.log(error));
-    
+}
+
+render() {
+    console.log(this.state.pelis);
+    return(
+        <React.Fragment>
+        <Header/>
+        <h1>Cards con su respectivo fetch e info</h1>
+        </React.Fragment>
+    )
 }
 
 }
