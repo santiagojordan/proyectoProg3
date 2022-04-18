@@ -10,7 +10,7 @@ class Movies extends Component {
             pelis: [],
             next: "",
             ordenPelis: "columnaPelis",
-            resultadoPelis: [],
+            pelisFiltradas: [],
         }
     }
 
@@ -21,7 +21,7 @@ componentDidMount() {
     .then((data) => this.setState({
         pelis: data.results,
         next: data.page + 1,
-        resultadoPelis: data.results,
+        pelisFiltradas: data.results,
     }
    
     ))
@@ -32,10 +32,12 @@ componentDidMount() {
 render() {
     console.log(this.state.pelis);
     return(
-        <React.Fragment>
-        
-        <h1>Aca va cards con su fetch e info</h1>
-        </React.Fragment>
+        <section>
+            {this.state.pelis.length === 0?
+            <p>Cargando...</p>:
+            <p>No se encuentran las peliculas solicitadas</p>
+            }
+        </section>
     )
 }
 
