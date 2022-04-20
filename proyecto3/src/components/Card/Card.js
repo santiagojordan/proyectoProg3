@@ -5,26 +5,28 @@ class Card extends Component{
 constructor(props){
     super(props)
     this.state={ 
-        link: " ",
+        link: "additional-info",
         text: "Ver más",
         viewMore: false,
     };
 
 }
 
-    /* viewMore() {
+    viewMore() {
         if (this.state.viewMore) {
             this.setState({
                 viewMore: false,
                 text: "Ver más",
+                link: "additional-info",
             });
         } else {
             this.setState({
                 viewMore: true,
                 text: "Ver menos",
+                link: "additional-info-show",
             });
         }
-    }*/ //VER CON TOTO (?)
+    }
 
 render(){
     return(
@@ -37,15 +39,15 @@ render(){
                     <i className="far fa-window-close"></i>
             </section>
         <main>
-        <img src="./img/image-default.png" alt="Imagen de la pelicula"/>
-        <h3>Título/ Nombre</h3>
-        <p class="description">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint cumque velit minus facere laboriosam voluptatem impedit ea unde labore optio eius quis, dignissimos expedita. Culpa, soluta perspiciatis! Sint, laboriosam cum.</p>
-        <section class="aditional-info">
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
-            <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse qui atque.</p>
+        <img src={"https://image.tmdb.org/t/p/w500" + this.props.pelicula.poster_path} alt="Imagen de la pelicula"/>
+        <h3>{this.props.pelicula.title}</h3>
+        <p className="description">{this.props.pelicula.overview}</p>
+        <section className={this.state.link}>
+            <p>{this.props.pelicula.popularity}</p>
+            <p>{this.props.pelicula.release_date}</p>
+            <p>{this.props.pelicula.vote_average}</p>
         </section>
-        <a href="">Ver más</a>
+        <p onClick={() => this.viewMore()}>{this.state.text}</p>
     </main>   
     </article>
 )    

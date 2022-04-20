@@ -1,5 +1,5 @@
 import React, {Component} from "react";
-//import Card from "../Card/Card";
+import Card from "../Card/Card";
 import Header from "../Header/Header";
 import "../Movies/movies.css";
 
@@ -33,9 +33,9 @@ render() {
     console.log(this.state.pelis);
     return(
         <section>
-            {this.state.pelis.length === 0?
+            {this.state.pelis.length === 0 ?
             <p>Cargando...</p>:
-            <p>No se encuentran las peliculas solicitadas</p>
+            this.state.pelis.map((pelicula,idx) => <Card pelicula={pelicula} key={idx}/>)
             }
         </section>
     )
