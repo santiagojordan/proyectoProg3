@@ -36,3 +36,15 @@
     max-height: 145px;
     overflow: hidden;
 }
+
+@media (min-width: 40rem) {
+    .cardsItem {
+      width: 50%;
+    }
+  }
+
+@media (min-width: 56rem) {
+    .cardsItem {
+      width: 22%;
+    }
+  }
