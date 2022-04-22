@@ -71,7 +71,7 @@ render() {
             <ul className="cards">            
             {this.state.pelis.length === 0 ?
             <p>Cargando...</p>:
-            this.state.pelis.map((pelicula,idx) => <Card pelicula={pelicula} key={idx}/>)
+            this.state.pelis.map((pelicula,idx) => <Card pelicula={pelicula} key={idx} borrarPelicula={ (id)=>this.borrar(id) }/>)
             }
             </ul>
         </section>

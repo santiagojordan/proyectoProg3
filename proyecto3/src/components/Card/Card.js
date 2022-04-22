@@ -39,6 +39,7 @@ render(){
         <div className="cardContent">
         <h3>{this.props.pelicula.title}</h3>
         <p className="description">{this.props.pelicula.overview}</p>
+        <button onClick={()=>this.props.borrarPelicula(this.props.pelicula.id)}>Borrar</button>
         <section className={this.state.link}>
             <p>Popularity:  {this.props.pelicula.popularity}</p>
             <p>Release date:  {this.props.pelicula.release_date}</p>
