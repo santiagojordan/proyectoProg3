@@ -27,10 +27,10 @@ class Buscador extends Component {
 			<div className="searchBar">
 		<form onSubmit= {(event)=> this.notDefault(event)}>
 			<input type="text" name="search" id="" placeholder="Search Movies..." onChange = {(dato) => this.getDatos(dato)} value={this.state.value}/>
-			<button type="submit"><i className="fas fa-search"></i></button>
+			<button type="submit" className="boton">Search<i className="fas fa-search"></i></button>
 		</form>     
 		</div>
-		);
+		)
 	}
 
 }
