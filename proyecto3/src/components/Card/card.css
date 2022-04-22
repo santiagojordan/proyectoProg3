@@ -17,7 +17,7 @@
     display: none;
 }
 
-.additional-info-show{
+.additional-info-show {
     display: block;
 }
 
@@ -31,13 +31,16 @@
 .cardContent {
     min-height: 300px;
 }
+.cardContent h3 {
+    text-align: center;
+}
 
 .description {
     max-height: 145px;
     overflow: hidden;
 }
 
-@media (min-width: 40rem) {
+/* @media (min-width: 40rem) {
     .cardsItem {
       width: 50%;
     }
@@ -46,5 +49,5 @@
 @media (min-width: 56rem) {
     .cardsItem {
       width: 22%;
-    }
-  }
+    } 
+  }*/
