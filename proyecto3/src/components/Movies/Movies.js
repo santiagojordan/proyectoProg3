@@ -1,6 +1,7 @@
 import React, {Component} from "react";
 import Card from "../Card/Card";
 import "../Movies/movies.css";
+import Buscador from "../Search/Buscador"
 
 
 class Movies extends Component {
@@ -64,6 +65,8 @@ filtrarPelis (porTexto) {
 render() {
     console.log(this.state.pelis);
     return(
+        <React.Fragment>
+        <Buscador filter = {(porTexto) => this.filtrarPeliculas(porTexto)}/>
         <section>
             <ul className="cards">            
             {this.state.pelis.length === 0 ?
@@ -72,6 +75,7 @@ render() {
             }
             </ul>
         </section>
+        </React.Fragment>
     )
 }
 
