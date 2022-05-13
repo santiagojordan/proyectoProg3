@@ -11,6 +11,8 @@ class Movies extends Component {
             pelis: [],
             next: "",
             filas: true,
+            claseLista: "cards",
+            claseTarjeta: "cardsItem"
         }
     }
 
@@ -61,22 +63,37 @@ filtrarPelis (porTexto) {
     })
 }
 
+cambiarOrientacion () {
+    if (this.state.claseLista==="cards") {
+    this.setState({
+        claseLista: "horizontal",
+        claseTarjeta: "cardsHorizontal"
+    })
+    } else {
+        this.setState({
+            claseLista: "cards",
+            claseTarjeta: "cardsItem"
+        })
+    }
+}
 
 render() {
     console.log(this.state.pelis);
     return(
         <React.Fragment>
-        <Buscador filter = {(porTexto) => this.filtrarPeliculas(porTexto)}/>
+        <Buscador filter = {(porTexto) => this.filtrarPelis(porTexto)}/>
+        <button onClick={()=>this.cambiarOrientacion()}> cambiarOrientacion </button>
         <section>
-            <ul className="cards">            
+            <ul className={`${this.state.claseLista}`}>            
             {this.state.pelis.length === 0 ?
             <p>Cargando...</p>:
-            this.state.pelis.map((pelicula,idx) => <Card pelicula={pelicula} key={idx} borrarPelicula={ (id)=>this.borrar(id) }/>)
+            this.state.pelis.map((pelicula,idx) => <Card pelicula={pelicula} key={idx} borrarPelicula={ (id)=>this.borrar(id) } claseTarjeta={this.state.claseTarjeta}/>)
             }
             </ul>
         </section>
         </React.Fragment>
     )
+
 }
 
 }

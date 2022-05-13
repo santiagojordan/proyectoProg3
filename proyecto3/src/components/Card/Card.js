@@ -30,9 +30,9 @@ viewMore() {
 
 render(){
     return(
-        <li className="cardsItem">
+        <li className={`${this.props.claseTarjeta}`}>
             <div className="card">
-        <main>
+        <main className="tarjeta">
 
         <img className="image" src={"https://image.tmdb.org/t/p/w500" + this.props.pelicula.poster_path} alt="Imagen de la pelicula"/>
 

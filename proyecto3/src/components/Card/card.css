@@ -8,6 +8,16 @@
     min-height: 590px;
 }
 
+.cardsHorizontal {
+    padding: 20px;
+    background-color: rgb(173, 177, 166);
+    margin-bottom: 20px;
+    display: flex;
+    flex-direction: column;
+    width: 90%;
+    min-height: 590px;
+}
+
 .pre-ver-mas p {
     width: 410px;
     font-size: 15px;
@@ -28,6 +38,11 @@
     min-height: 650px;
 }
 
+.cardsHorizontal main {
+    display: flex;
+    align-items: center;
+}
+
 .cardContent {
     min-height: 300px;
 }
@@ -39,6 +54,7 @@
     max-height: 145px;
     overflow: hidden;
 }
+
 
 /* @media (min-width: 40rem) {
     .cardsItem {
